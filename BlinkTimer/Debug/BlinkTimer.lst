@@ -1,0 +1,1755 @@
+
+BlinkTimer.elf:     file format elf32-littlearm
+BlinkTimer.elf
+architecture: arm, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x08000189
+
+Program Header:
+    LOAD off    0x00008000 vaddr 0x08000000 paddr 0x08000000 align 2**15
+         filesz 0x000007e8 memsz 0x000007e8 flags rwx
+    LOAD off    0x00010000 vaddr 0x20000000 paddr 0x20000000 align 2**15
+         filesz 0x00000000 memsz 0x00000104 flags rw-
+private flags = 5000002: [Version5 EABI] [has entry point]
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn  Flags
+  0 .isr_vector   00000264  08000000  08000000  00008000  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 ._inits       00000004  08000264  08000264  00008264  2**2  CONTENTS, ALLOC, LOAD, DATA
+  2 .text         00000580  08000268  08000268  00008268  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .bss          00000004  20000000  20000000  00010000  2**2  ALLOC
+  4 ._check_stack 00000100  20000004  20000004  00010000  2**0  ALLOC
+  5 .comment      00000070  00000000  00000000  000087e8  2**0  CONTENTS, READONLY
+  6 .ARM.attributes 00000033  00000000  00000000  00008858  2**0  CONTENTS, READONLY
+  7 .debug_aranges 00000650  00000000  00000000  0000888b  2**0  CONTENTS, READONLY, DEBUGGING
+  8 .debug_info   00004021  00000000  00000000  00008edb  2**0  CONTENTS, READONLY, DEBUGGING
+  9 .debug_abbrev 00000983  00000000  00000000  0000cefc  2**0  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_line   0000285d  00000000  00000000  0000d87f  2**0  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_frame  00001400  00000000  00000000  000100dc  2**2  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_str    000612bd  00000000  00000000  000114dc  2**0  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_ranges 000005d0  00000000  00000000  00072799  2**0  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_macro  0001064e  00000000  00000000  00072d69  2**0  CONTENTS, READONLY, DEBUGGING
+SYMBOL TABLE:
+08000000 l    d  .isr_vector	00000000 .isr_vector
+08000264 l    d  ._inits	00000000 ._inits
+08000268 l    d  .text	00000000 .text
+20000000 l    d  .bss	00000000 .bss
+20000004 l    d  ._check_stack	00000000 ._check_stack
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    d  .debug_macro	00000000 .debug_macro
+00000000 l    df *ABS*	00000000 vectors_stm32f4xx.c
+00000000 l    df *ABS*	00000000 startup_cm.c
+00000000 l    df *ABS*	00000000 main.c
+20000000 l     O .bss	00000004 timerValue.8475
+00000000 l    df *ABS*	00000000 startup_stm32f4xx.c
+00000000 l    df *ABS*	00000000 system_stm32f4xx.c
+08000428 l     F .text	000000f4 SetSysClock
+00000000 l    df *ABS*	00000000 stm32f4xx_gpio.c
+00000000 l    df *ABS*	00000000 stm32f4xx_rcc.c
+00000000 l    df *ABS*	00000000 stm32f4xx_tim.c
+00000000 l    df *ABS*	00000000 
+2001fc00 l       *ABS*	00000000 _Heap_Limit
+00000400 l       *ABS*	00000000 _Main_Stack_Size
+080007e8 l       .text	00000000 __exidx_end
+20000004 l       ._check_stack	00000000 _Heap_Begin
+080007e8 l       .bss	00000000 _etext
+2001fc00 l       *ABS*	00000000 __Main_Stack_Limit
+08000268 l       ._inits	00000000 __fini_array_end
+080007e8 l       .text	00000000 __exidx_start
+00000400 l       *ABS*	00000000 __Main_Stack_Size
+00000100 l       *ABS*	00000000 _Minimum_Stack_Size
+20000004 l       ._check_stack	00000000 _end_noinit
+08000268 l       ._inits	00000000 __fini_array_start
+08000268 l       ._inits	00000000 __init_array_end
+08000268 l       ._inits	00000000 __preinit_array_end
+20020000 l       *ABS*	00000000 __stack
+08000268 l       ._inits	00000000 __init_array_start
+08000264 l       ._inits	00000000 __preinit_array_start
+08000214  w    F .isr_vector	00000006 RTC_Alarm_IRQHandler
+08000214  w    F .isr_vector	00000006 HASH_RNG_IRQHandler
+08000214  w    F .isr_vector	00000006 EXTI2_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM8_CC_IRQHandler
+0800024c  w    F .isr_vector	00000006 DebugMon_Handler
+08000264 g     O ._inits	00000004 p_system_init
+20000000 g       .text	00000000 __data_start__
+08000214  w    F .isr_vector	00000006 TIM1_CC_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream5_IRQHandler
+08000224  w    F .isr_vector	00000006 HardFault_Handler
+08000214  w    F .isr_vector	00000006 DMA1_Stream5_IRQHandler
+0800025c  w    F .isr_vector	00000006 SysTick_Handler
+08000214  w    F .isr_vector	00000006 PVD_IRQHandler
+08000214  w    F .isr_vector	00000006 SDIO_IRQHandler
+08000214  w    F .isr_vector	00000006 TAMP_STAMP_IRQHandler
+080007e8 g       .bss	00000000 _sidata
+08000254  w    F .isr_vector	00000006 PendSV_Handler
+0800021c  w    F .isr_vector	00000006 NMI_Handler
+080001cc g     F .isr_vector	00000048 system_init
+08000214  w    F .isr_vector	00000006 CAN2_RX1_IRQHandler
+08000214  w    F .isr_vector	00000006 EXTI3_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM8_TRG_COM_TIM14_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM1_UP_TIM10_IRQHandler
+20000000 g       .bss	00000000 _sbss
+08000214  w    F .isr_vector	00000006 TIM8_UP_TIM13_IRQHandler
+08000214  w    F .isr_vector	00000006 I2C3_ER_IRQHandler
+08000214  w    F .isr_vector	00000006 EXTI0_IRQHandler
+08000214  w    F .isr_vector	00000006 I2C2_EV_IRQHandler
+080007a8 g     F .text	0000003e TIM_Cmd
+20000004 g       ._check_stack	00000000 _noinit
+08000214  w    F .isr_vector	00000006 DMA1_Stream2_IRQHandler
+08000214  w    F .isr_vector	00000006 CAN1_RX0_IRQHandler
+08000214  w    F .isr_vector	00000006 FPU_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_HS_WKUP_IRQHandler
+08000638 g     F .text	00000022 GPIO_ToggleBits
+0800023c  w    F .isr_vector	00000006 UsageFault_Handler
+08000214  w    F .isr_vector	00000006 CAN2_SCE_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream2_IRQHandler
+0800051c g     F .text	0000011a GPIO_Init
+20000000 g       .bss	00000000 __bss_start__
+20000000 g       .text	00000000 _sdata
+08000214  w    F .isr_vector	00000006 SPI1_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM6_DAC_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM1_BRK_TIM9_IRQHandler
+08000214  w    F .isr_vector	00000006 DCMI_IRQHandler
+08000214  w    F .isr_vector	00000006 CAN2_RX0_IRQHandler
+08000698 g     F .text	0000003c RCC_APB1PeriphClockCmd
+08000214  w    F .isr_vector	00000006 DMA2_Stream3_IRQHandler
+0800031c g     F .text	0000006c __libc_init_array
+08000214  w    F .isr_vector	00000006 USART6_IRQHandler
+08000214  w    F .isr_vector	00000006 USART3_IRQHandler
+08000214  w    F .isr_vector	00000006 CRYP_IRQHandler
+08000388 g     F .text	0000003c __libc_fini_array
+20000004 g       .bss	00000000 _ebss
+08000188  w    F .isr_vector	00000044 Reset_Handler
+08000214  w    F .isr_vector	00000006 CAN1_RX1_IRQHandler
+08000214  w    F .isr_vector	00000006 UART5_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream0_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM4_IRQHandler
+08000214  w    F .isr_vector	00000006 I2C1_EV_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA1_Stream6_IRQHandler
+20000000 g       .text	00000000 __data_end__
+08000214  w    F .isr_vector	00000006 DMA1_Stream1_IRQHandler
+08000214  w    F .isr_vector	00000006 UART4_IRQHandler
+20000004 g       .bss	00000000 __bss_end__
+08000214  w    F .isr_vector	00000006 TIM3_IRQHandler
+08000214  w    F .isr_vector	00000006 RCC_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM8_BRK_TIM12_IRQHandler
+08000214  w    F .isr_vector	00000006 Default_Handler
+08000214  w    F .isr_vector	00000006 EXTI15_10_IRQHandler
+08000214  w    F .isr_vector	00000006 ADC_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA1_Stream7_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM7_IRQHandler
+08000214  w    F .isr_vector	00000006 CAN2_TX_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM5_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream7_IRQHandler
+08000214  w    F .isr_vector	00000006 I2C3_EV_IRQHandler
+08000214  w    F .isr_vector	00000006 EXTI9_5_IRQHandler
+08000214  w    F .isr_vector	00000006 RTC_WKUP_IRQHandler
+08000214  w    F .isr_vector	00000006 ETH_WKUP_IRQHandler
+080002dc g     F .text	00000040 Timer_init
+08000214  w    F .isr_vector	00000006 SPI2_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_HS_EP1_IN_IRQHandler
+0800022c  w    F .isr_vector	00000006 MemManage_Handler
+08000268 g     F .text	00000074 main
+08000214  w    F .isr_vector	00000006 DMA1_Stream0_IRQHandler
+08000214  w    F .isr_vector	00000006 CAN1_TX_IRQHandler
+08000244  w    F .isr_vector	00000006 SVC_Handler
+08000214  w    F .isr_vector	00000006 EXTI4_IRQHandler
+080003d0 g     F .text	00000058 SystemInit
+08000214  w    F .isr_vector	00000006 FSMC_IRQHandler
+08000214  w    F .isr_vector	00000006 ETH_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_HS_EP1_OUT_IRQHandler
+08000214  w    F .isr_vector	00000006 WWDG_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM2_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_FS_WKUP_IRQHandler
+08000214  w    F .isr_vector	00000006 TIM1_TRG_COM_TIM11_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_HS_IRQHandler
+20020000 g       *ABS*	00000000 _estack
+08000214  w    F .isr_vector	00000006 EXTI1_IRQHandler
+20000000 g       .text	00000000 _edata
+080006d4 g     F .text	000000d4 TIM_TimeBaseInit
+08000214  w    F .isr_vector	00000006 USART2_IRQHandler
+08000000 g     O .isr_vector	00000188 g_pfnVectors
+08000214  w    F .isr_vector	00000006 I2C2_ER_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream1_IRQHandler
+08000214  w    F .isr_vector	00000006 CAN1_SCE_IRQHandler
+08000214  w    F .isr_vector	00000006 FLASH_IRQHandler
+080003c4  w    F .text	0000000a _exit
+08000214  w    F .isr_vector	00000006 DMA2_Stream4_IRQHandler
+08000234  w    F .isr_vector	00000006 BusFault_Handler
+0800065c g     F .text	0000003c RCC_AHB1PeriphClockCmd
+08000214  w    F .isr_vector	00000006 USART1_IRQHandler
+08000214  w    F .isr_vector	00000006 OTG_FS_IRQHandler
+08000214  w    F .isr_vector	00000006 SPI3_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA1_Stream4_IRQHandler
+08000214  w    F .isr_vector	00000006 I2C1_ER_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA2_Stream6_IRQHandler
+08000214  w    F .isr_vector	00000006 DMA1_Stream3_IRQHandler
+
+
+
+Disassembly of section .isr_vector:
+
+08000000 <g_pfnVectors>:
+$d():
+ 8000000:	00 00 02 20 89 01 00 08 1d 02 00 08 25 02 00 08     ... ........%...
+ 8000010:	2d 02 00 08 35 02 00 08 3d 02 00 08 00 00 00 00     -...5...=.......
+	...
+ 800002c:	45 02 00 08 4d 02 00 08 00 00 00 00 55 02 00 08     E...M.......U...
+ 800003c:	5d 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ]...............
+ 800004c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800005c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800006c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800007c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800008c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800009c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000ac:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000bc:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000cc:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000dc:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000ec:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 80000fc:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800010c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800011c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800012c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800013c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800014c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800015c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800016c:	15 02 00 08 15 02 00 08 15 02 00 08 15 02 00 08     ................
+ 800017c:	15 02 00 08 15 02 00 08 15 02 00 08                 ............
+
+08000188 <Reset_Handler>:
+Reset_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:217
+}
+
+// This is the place where Cortex-M core will go immediately after reset.
+void __attribute__ ((section(".after_vectors")))
+Reset_Handler(void)
+{
+ 8000188:	b580      	push	{r7, lr}
+ 800018a:	b084      	sub	sp, #16
+ 800018c:	af00      	add	r7, sp, #0
+ 800018e:	4b0d      	ldr	r3, [pc, #52]	; (80001c4 <Reset_Handler+0x3c>)
+ 8000190:	60bb      	str	r3, [r7, #8]
+ 8000192:	4b0d      	ldr	r3, [pc, #52]	; (80001c8 <Reset_Handler+0x40>)
+ 8000194:	607b      	str	r3, [r7, #4]
+bss_init():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:118
+__attribute__((always_inline))
+bss_init(unsigned int* section_begin, unsigned int* section_end)
+{
+  // Iterate and clear word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+ 8000196:	68bb      	ldr	r3, [r7, #8]
+ 8000198:	603b      	str	r3, [r7, #0]
+ 800019a:	e004      	b.n	80001a6 <Reset_Handler+0x1e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:120
+  while (p < section_end)
+    *p++ = 0;
+ 800019c:	683b      	ldr	r3, [r7, #0]
+ 800019e:	1d1a      	adds	r2, r3, #4
+ 80001a0:	603a      	str	r2, [r7, #0]
+ 80001a2:	2200      	movs	r2, #0
+ 80001a4:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:119
+bss_init(unsigned int* section_begin, unsigned int* section_end)
+{
+  // Iterate and clear word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+  while (p < section_end)
+ 80001a6:	687a      	ldr	r2, [r7, #4]
+ 80001a8:	683b      	ldr	r3, [r7, #0]
+ 80001aa:	429a      	cmp	r2, r3
+ 80001ac:	d8f6      	bhi.n	800019c <Reset_Handler+0x14>
+Reset_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:227
+  // Zero fill the bss segment
+  bss_init(&__bss_start__, &__bss_end__);
+
+  // Call the standard library initialisation (mandatory, SystemInit()
+  // and C++ static constructors are called from here).
+  __libc_init_array();
+ 80001ae:	f000 f8b5 	bl	800031c <__libc_init_array>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:230
+
+  // Call the main entry point, and save the exit code.
+  int r = main();
+ 80001b2:	f000 f859 	bl	8000268 <__fini_array_end>
+ 80001b6:	60f8      	str	r0, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:233
+
+  // Run the static destructors.
+  __libc_fini_array();
+ 80001b8:	f000 f8e6 	bl	8000388 <__libc_fini_array>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:238
+
+  // On test platforms, like semihosting, this can be used to inform
+  // the host on the test result.
+  // On embedded platforms, usually reset the processor.
+  _exit(r);
+ 80001bc:	68f8      	ldr	r0, [r7, #12]
+ 80001be:	f000 f901 	bl	80003c4 <_exit>
+ 80001c2:	bf00      	nop
+ 80001c4:	20000000 	.word	0x20000000
+ 80001c8:	20000004 	.word	0x20000004
+
+080001cc <system_init>:
+system_init():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:248
+
+// System initialisation, executed before constructors.
+void
+__attribute__((section(".after_vectors")))
+system_init()
+{
+ 80001cc:	b580      	push	{r7, lr}
+ 80001ce:	b084      	sub	sp, #16
+ 80001d0:	af00      	add	r7, sp, #0
+ 80001d2:	4b0d      	ldr	r3, [pc, #52]	; (8000208 <system_init+0x3c>)
+ 80001d4:	60fb      	str	r3, [r7, #12]
+ 80001d6:	4b0d      	ldr	r3, [pc, #52]	; (800020c <system_init+0x40>)
+ 80001d8:	60bb      	str	r3, [r7, #8]
+ 80001da:	4b0d      	ldr	r3, [pc, #52]	; (8000210 <system_init+0x44>)
+ 80001dc:	607b      	str	r3, [r7, #4]
+data_init():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:105
+data_init(unsigned int* from, unsigned int* section_begin,
+    unsigned int* section_end)
+{
+  // Iterate and copy word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+ 80001de:	68bb      	ldr	r3, [r7, #8]
+ 80001e0:	603b      	str	r3, [r7, #0]
+ 80001e2:	e007      	b.n	80001f4 <system_init+0x28>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:107
+  while (p < section_end)
+    *p++ = *from++;
+ 80001e4:	683b      	ldr	r3, [r7, #0]
+ 80001e6:	1d1a      	adds	r2, r3, #4
+ 80001e8:	603a      	str	r2, [r7, #0]
+ 80001ea:	68fa      	ldr	r2, [r7, #12]
+ 80001ec:	1d11      	adds	r1, r2, #4
+ 80001ee:	60f9      	str	r1, [r7, #12]
+ 80001f0:	6812      	ldr	r2, [r2, #0]
+ 80001f2:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:106
+    unsigned int* section_end)
+{
+  // Iterate and copy word by word.
+  // It is assumed that the pointers are word aligned.
+  unsigned int *p = section_begin;
+  while (p < section_end)
+ 80001f4:	687a      	ldr	r2, [r7, #4]
+ 80001f6:	683b      	ldr	r3, [r7, #0]
+ 80001f8:	429a      	cmp	r2, r3
+ 80001fa:	d8f3      	bhi.n	80001e4 <system_init+0x18>
+system_init():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:256
+  // so we must be sure it is executed somewhere.
+  // (for example librdimon)
+  data_init(&_sidata, &_sdata, &_edata);
+
+  // Call the CSMSIS system initialisation routine
+  SystemInit();
+ 80001fc:	f000 f8e8 	bl	80003d0 <SystemInit>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:257
+}
+ 8000200:	3710      	adds	r7, #16
+ 8000202:	46bd      	mov	sp, r7
+ 8000204:	bd80      	pop	{r7, pc}
+ 8000206:	bf00      	nop
+ 8000208:	080007e8 	.word	0x080007e8
+ 800020c:	20000000 	.word	0x20000000
+ 8000210:	20000000 	.word	0x20000000
+
+08000214 <ADC_IRQHandler>:
+Default_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:432
+//
+//*****************************************************************************
+
+void __attribute__ ((section(".after_vectors")))
+Default_Handler(void)
+{
+ 8000214:	b480      	push	{r7}
+ 8000216:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:435 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000218:	e7fe      	b.n	8000218 <ADC_IRQHandler+0x4>
+RTC_Alarm_IRQHandler():
+ 800021a:	bf00      	nop
+
+0800021c <NMI_Handler>:
+NMI_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:444
+// Default exception handlers. Override the ones here by defining your own
+// handler routines in your application code.
+//*****************************************************************************
+void __attribute__ ((section(".after_vectors")))
+NMI_Handler(void)
+{
+ 800021c:	b480      	push	{r7}
+ 800021e:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:447 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000220:	e7fe      	b.n	8000220 <NMI_Handler+0x4>
+ 8000222:	bf00      	nop
+
+08000224 <HardFault_Handler>:
+HardFault_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:452
+}
+
+void __attribute__ ((section(".after_vectors")))
+HardFault_Handler(void)
+{
+ 8000224:	b480      	push	{r7}
+ 8000226:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:455 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000228:	e7fe      	b.n	8000228 <HardFault_Handler+0x4>
+ 800022a:	bf00      	nop
+
+0800022c <MemManage_Handler>:
+MemManage_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:460
+}
+
+void __attribute__ ((section(".after_vectors")))
+MemManage_Handler(void)
+{
+ 800022c:	b480      	push	{r7}
+ 800022e:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:463 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000230:	e7fe      	b.n	8000230 <MemManage_Handler+0x4>
+ 8000232:	bf00      	nop
+
+08000234 <BusFault_Handler>:
+BusFault_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:468
+}
+
+void __attribute__ ((section(".after_vectors")))
+BusFault_Handler(void)
+{
+ 8000234:	b480      	push	{r7}
+ 8000236:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:471 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000238:	e7fe      	b.n	8000238 <BusFault_Handler+0x4>
+ 800023a:	bf00      	nop
+
+0800023c <UsageFault_Handler>:
+UsageFault_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:476
+}
+
+void __attribute__ ((section(".after_vectors")))
+UsageFault_Handler(void)
+{
+ 800023c:	b480      	push	{r7}
+ 800023e:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:479 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000240:	e7fe      	b.n	8000240 <UsageFault_Handler+0x4>
+ 8000242:	bf00      	nop
+
+08000244 <SVC_Handler>:
+SVC_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:484
+}
+
+void __attribute__ ((section(".after_vectors")))
+SVC_Handler(void)
+{
+ 8000244:	b480      	push	{r7}
+ 8000246:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:487 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000248:	e7fe      	b.n	8000248 <SVC_Handler+0x4>
+ 800024a:	bf00      	nop
+
+0800024c <DebugMon_Handler>:
+DebugMon_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:492
+}
+
+void __attribute__ ((section(".after_vectors")))
+DebugMon_Handler(void)
+{
+ 800024c:	b480      	push	{r7}
+ 800024e:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:495 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000250:	e7fe      	b.n	8000250 <DebugMon_Handler+0x4>
+ 8000252:	bf00      	nop
+
+08000254 <PendSV_Handler>:
+PendSV_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:500
+}
+
+void __attribute__ ((section(".after_vectors")))
+PendSV_Handler(void)
+{
+ 8000254:	b480      	push	{r7}
+ 8000256:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:503 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000258:	e7fe      	b.n	8000258 <PendSV_Handler+0x4>
+ 800025a:	bf00      	nop
+
+0800025c <SysTick_Handler>:
+SysTick_Handler():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:508
+}
+
+void __attribute__ ((section(".after_vectors")))
+SysTick_Handler(void)
+{
+ 800025c:	b480      	push	{r7}
+ 800025e:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/vectors_stm32f4xx.c:511 (discriminator 1)
+  while (1)
+    {
+    }
+ 8000260:	e7fe      	b.n	8000260 <SysTick_Handler+0x4>
+ 8000262:	bf00      	nop
+
+Disassembly of section .text:
+
+08000268 <main>:
+main():
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:12
+#include <stdint.h>
+
+void Timer_init  (void);
+
+int main(void)
+{
+ 8000268:	b580      	push	{r7, lr}
+ 800026a:	b084      	sub	sp, #16
+ 800026c:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:13
+  Timer_init();
+ 800026e:	f000 f835 	bl	80002dc <Timer_init>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:15
+
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+ 8000272:	2008      	movs	r0, #8
+ 8000274:	2101      	movs	r1, #1
+ 8000276:	f000 f9f1 	bl	800065c <RCC_AHB1PeriphClockCmd>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:17
+  GPIO_InitTypeDef  GPIO_InitStructure;
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_12 |GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+ 800027a:	f44f 4370 	mov.w	r3, #61440	; 0xf000
+ 800027e:	607b      	str	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:18
+  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_OUT;
+ 8000280:	2301      	movs	r3, #1
+ 8000282:	723b      	strb	r3, [r7, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:19
+  GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+ 8000284:	2300      	movs	r3, #0
+ 8000286:	72bb      	strb	r3, [r7, #10]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:20
+  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
+ 8000288:	2303      	movs	r3, #3
+ 800028a:	727b      	strb	r3, [r7, #9]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:21
+  GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL;
+ 800028c:	2300      	movs	r3, #0
+ 800028e:	72fb      	strb	r3, [r7, #11]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:22
+  GPIO_Init(GPIOD, &GPIO_InitStructure);
+ 8000290:	1d3b      	adds	r3, r7, #4
+ 8000292:	480f      	ldr	r0, [pc, #60]	; (80002d0 <__fini_array_end+0x68>)
+ 8000294:	4619      	mov	r1, r3
+ 8000296:	f000 f941 	bl	800051c <GPIO_Init>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:25
+
+  static uint32_t timerValue;
+  uint32_t lastTime = TIM2->CNT;
+ 800029a:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 800029e:	6a5b      	ldr	r3, [r3, #36]	; 0x24
+ 80002a0:	60fb      	str	r3, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:28
+  while (1)
+  {
+    timerValue = TIM2->CNT;
+ 80002a2:	f04f 4380 	mov.w	r3, #1073741824	; 0x40000000
+ 80002a6:	6a5a      	ldr	r2, [r3, #36]	; 0x24
+ 80002a8:	4b0a      	ldr	r3, [pc, #40]	; (80002d4 <__fini_array_end+0x6c>)
+ 80002aa:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:30
+
+    if( timerValue - lastTime > 1000000 )
+ 80002ac:	4b09      	ldr	r3, [pc, #36]	; (80002d4 <__fini_array_end+0x6c>)
+ 80002ae:	681a      	ldr	r2, [r3, #0]
+ 80002b0:	68fb      	ldr	r3, [r7, #12]
+ 80002b2:	1ad2      	subs	r2, r2, r3
+ 80002b4:	4b08      	ldr	r3, [pc, #32]	; (80002d8 <__fini_array_end+0x70>)
+ 80002b6:	429a      	cmp	r2, r3
+ 80002b8:	d908      	bls.n	80002cc <main+0x64>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:32
+    {
+      GPIO_ToggleBits(GPIOD, GPIO_Pin_12 |GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15);
+ 80002ba:	4805      	ldr	r0, [pc, #20]	; (80002d0 <__fini_array_end+0x68>)
+ 80002bc:	f44f 4170 	mov.w	r1, #61440	; 0xf000
+ 80002c0:	f000 f9ba 	bl	8000638 <GPIO_ToggleBits>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:33
+      lastTime = timerValue;
+ 80002c4:	4b03      	ldr	r3, [pc, #12]	; (80002d4 <__fini_array_end+0x6c>)
+ 80002c6:	681b      	ldr	r3, [r3, #0]
+ 80002c8:	60fb      	str	r3, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:36
+    }
+
+  }
+ 80002ca:	e7ea      	b.n	80002a2 <main+0x3a>
+ 80002cc:	e7e9      	b.n	80002a2 <main+0x3a>
+ 80002ce:	bf00      	nop
+ 80002d0:	40020c00 	.word	0x40020c00
+ 80002d4:	20000000 	.word	0x20000000
+ 80002d8:	000f4240 	.word	0x000f4240
+
+080002dc <Timer_init>:
+Timer_init():
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:41
+}
+
+// Timer count 1uS
+void Timer_init(void)
+{
+ 80002dc:	b580      	push	{r7, lr}
+ 80002de:	b084      	sub	sp, #16
+ 80002e0:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:42
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+ 80002e2:	2001      	movs	r0, #1
+ 80002e4:	2101      	movs	r1, #1
+ 80002e6:	f000 f9d7 	bl	8000698 <RCC_APB1PeriphClockCmd>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:45
+
+  TIM_TimeBaseInitTypeDef timerInitStructure;
+  timerInitStructure.TIM_Prescaler = 84 - 1;               // Timer Clock 84MHz
+ 80002ea:	2353      	movs	r3, #83	; 0x53
+ 80002ec:	80bb      	strh	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:46
+  timerInitStructure.TIM_ClockDivision = TIM_CKD_DIV1;
+ 80002ee:	2300      	movs	r3, #0
+ 80002f0:	81bb      	strh	r3, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:47
+  timerInitStructure.TIM_Period = 0xFFFFFFFF - 1;
+ 80002f2:	f06f 0301 	mvn.w	r3, #1
+ 80002f6:	60bb      	str	r3, [r7, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:48
+  timerInitStructure.TIM_RepetitionCounter = 0;
+ 80002f8:	2300      	movs	r3, #0
+ 80002fa:	73bb      	strb	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:49
+  timerInitStructure.TIM_CounterMode = TIM_CounterMode_Up;
+ 80002fc:	2300      	movs	r3, #0
+ 80002fe:	80fb      	strh	r3, [r7, #6]
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:50
+  TIM_TimeBaseInit(TIM2, &timerInitStructure);
+ 8000300:	1d3b      	adds	r3, r7, #4
+ 8000302:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+ 8000306:	4619      	mov	r1, r3
+ 8000308:	f000 f9e4 	bl	80006d4 <TIM_TimeBaseInit>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:51
+  TIM_Cmd(TIM2, ENABLE);
+ 800030c:	f04f 4080 	mov.w	r0, #1073741824	; 0x40000000
+ 8000310:	2101      	movs	r1, #1
+ 8000312:	f000 fa49 	bl	80007a8 <TIM_Cmd>
+/home/chansak/workspace/BlinkTimer/Debug/../src/main.c:52
+}
+ 8000316:	3710      	adds	r7, #16
+ 8000318:	46bd      	mov	sp, r7
+ 800031a:	bd80      	pop	{r7, pc}
+
+0800031c <__libc_init_array>:
+__libc_init_array():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:179
+(*__fini_array_end[])(void) __attribute__((weak));
+
+// Iterate over all the preinit/init routines.
+inline void
+__libc_init_array(void)
+{
+ 800031c:	b580      	push	{r7, lr}
+ 800031e:	b082      	sub	sp, #8
+ 8000320:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:183
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+ 8000322:	4a15      	ldr	r2, [pc, #84]	; (8000378 <__libc_init_array+0x5c>)
+ 8000324:	4b15      	ldr	r3, [pc, #84]	; (800037c <__libc_init_array+0x60>)
+ 8000326:	1ad3      	subs	r3, r2, r3
+ 8000328:	109b      	asrs	r3, r3, #2
+ 800032a:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:184
+  for (i = 0; i < count; i++)
+ 800032c:	2300      	movs	r3, #0
+ 800032e:	607b      	str	r3, [r7, #4]
+ 8000330:	e007      	b.n	8000342 <__libc_init_array+0x26>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:185 (discriminator 2)
+    __preinit_array_start[i]();
+ 8000332:	4b12      	ldr	r3, [pc, #72]	; (800037c <__libc_init_array+0x60>)
+ 8000334:	687a      	ldr	r2, [r7, #4]
+ 8000336:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 800033a:	4798      	blx	r3
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:184 (discriminator 2)
+{
+  size_t count;
+  size_t i;
+
+  count = __preinit_array_end - __preinit_array_start;
+  for (i = 0; i < count; i++)
+ 800033c:	687b      	ldr	r3, [r7, #4]
+ 800033e:	3301      	adds	r3, #1
+ 8000340:	607b      	str	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:184 (discriminator 1)
+ 8000342:	687a      	ldr	r2, [r7, #4]
+ 8000344:	683b      	ldr	r3, [r7, #0]
+ 8000346:	429a      	cmp	r2, r3
+ 8000348:	d3f3      	bcc.n	8000332 <__libc_init_array+0x16>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:192
+  // If you need to run the code in the .init section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+ 800034a:	4a0d      	ldr	r2, [pc, #52]	; (8000380 <__libc_init_array+0x64>)
+ 800034c:	4b0d      	ldr	r3, [pc, #52]	; (8000384 <__libc_init_array+0x68>)
+ 800034e:	1ad3      	subs	r3, r2, r3
+ 8000350:	109b      	asrs	r3, r3, #2
+ 8000352:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:193
+  for (i = 0; i < count; i++)
+ 8000354:	2300      	movs	r3, #0
+ 8000356:	607b      	str	r3, [r7, #4]
+ 8000358:	e007      	b.n	800036a <__libc_init_array+0x4e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:194 (discriminator 2)
+    __init_array_start[i]();
+ 800035a:	4b0a      	ldr	r3, [pc, #40]	; (8000384 <__libc_init_array+0x68>)
+ 800035c:	687a      	ldr	r2, [r7, #4]
+ 800035e:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 8000362:	4798      	blx	r3
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:193 (discriminator 2)
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_init();
+
+  count = __init_array_end - __init_array_start;
+  for (i = 0; i < count; i++)
+ 8000364:	687b      	ldr	r3, [r7, #4]
+ 8000366:	3301      	adds	r3, #1
+ 8000368:	607b      	str	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:193 (discriminator 1)
+ 800036a:	687a      	ldr	r2, [r7, #4]
+ 800036c:	683b      	ldr	r3, [r7, #0]
+ 800036e:	429a      	cmp	r2, r3
+ 8000370:	d3f3      	bcc.n	800035a <__libc_init_array+0x3e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:195
+    __init_array_start[i]();
+}
+ 8000372:	3708      	adds	r7, #8
+ 8000374:	46bd      	mov	sp, r7
+ 8000376:	bd80      	pop	{r7, pc}
+ 8000378:	08000268 	.word	0x08000268
+ 800037c:	08000264 	.word	0x08000264
+ 8000380:	08000268 	.word	0x08000268
+ 8000384:	08000268 	.word	0x08000268
+
+08000388 <__libc_fini_array>:
+__libc_fini_array():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:200
+
+// Run all the cleanup routines.
+inline void
+__libc_fini_array(void)
+{
+ 8000388:	b580      	push	{r7, lr}
+ 800038a:	b082      	sub	sp, #8
+ 800038c:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:204
+  size_t count;
+  size_t i;
+
+  count = __fini_array_end - __fini_array_start;
+ 800038e:	4a0b      	ldr	r2, [pc, #44]	; (80003bc <__libc_fini_array+0x34>)
+ 8000390:	4b0b      	ldr	r3, [pc, #44]	; (80003c0 <__libc_fini_array+0x38>)
+ 8000392:	1ad3      	subs	r3, r2, r3
+ 8000394:	109b      	asrs	r3, r3, #2
+ 8000396:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:205
+  for (i = count; i > 0; i--)
+ 8000398:	683b      	ldr	r3, [r7, #0]
+ 800039a:	607b      	str	r3, [r7, #4]
+ 800039c:	e008      	b.n	80003b0 <__libc_fini_array+0x28>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:206 (discriminator 2)
+    __fini_array_start[i - 1]();
+ 800039e:	687b      	ldr	r3, [r7, #4]
+ 80003a0:	1e5a      	subs	r2, r3, #1
+ 80003a2:	4b07      	ldr	r3, [pc, #28]	; (80003c0 <__libc_fini_array+0x38>)
+ 80003a4:	f853 3022 	ldr.w	r3, [r3, r2, lsl #2]
+ 80003a8:	4798      	blx	r3
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:205 (discriminator 2)
+{
+  size_t count;
+  size_t i;
+
+  count = __fini_array_end - __fini_array_start;
+  for (i = count; i > 0; i--)
+ 80003aa:	687b      	ldr	r3, [r7, #4]
+ 80003ac:	3b01      	subs	r3, #1
+ 80003ae:	607b      	str	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:205 (discriminator 1)
+ 80003b0:	687b      	ldr	r3, [r7, #4]
+ 80003b2:	2b00      	cmp	r3, #0
+ 80003b4:	d1f3      	bne.n	800039e <__libc_fini_array+0x16>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_cm.c:212
+
+  // If you need to run the code in the .fini section, please use
+  // the startup files, since this requires the code in crti.o and crtn.o
+  // to add the function prologue/epilogue.
+  //_fini();
+}
+ 80003b6:	3708      	adds	r7, #8
+ 80003b8:	46bd      	mov	sp, r7
+ 80003ba:	bd80      	pop	{r7, pc}
+ 80003bc:	08000268 	.word	0x08000268
+ 80003c0:	08000268 	.word	0x08000268
+
+080003c4 <_exit>:
+_exit():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_stm32f4xx.c:44
+// You can redefine it in the application, if more functionality
+// is required
+void
+__attribute__((weak))
+_exit(int r)
+{
+ 80003c4:	b480      	push	{r7}
+ 80003c6:	b083      	sub	sp, #12
+ 80003c8:	af00      	add	r7, sp, #0
+ 80003ca:	6078      	str	r0, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/startup_stm32f4xx.c:47 (discriminator 1)
+#if defined(DEBUG)
+  while(1)
+  ;
+ 80003cc:	e7fe      	b.n	80003cc <_exit+0x8>
+ 80003ce:	bf00      	nop
+
+080003d0 <SystemInit>:
+SystemInit():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:344
+  *         SystemFrequency variable.
+  * @param  None
+  * @retval None
+  */
+void SystemInit(void)
+{
+ 80003d0:	b580      	push	{r7, lr}
+ 80003d2:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:351
+  #if (__FPU_PRESENT == 1) && (__FPU_USED == 1)
+    SCB->CPACR |= ((3UL << 10*2)|(3UL << 11*2));  /* set CP10 and CP11 Full Access */
+  #endif
+  /* Reset the RCC clock configuration to the default reset state ------------*/
+  /* Set HSION bit */
+  RCC->CR |= (uint32_t)0x00000001;
+ 80003d4:	4b11      	ldr	r3, [pc, #68]	; (800041c <SystemInit+0x4c>)
+ 80003d6:	4a11      	ldr	r2, [pc, #68]	; (800041c <SystemInit+0x4c>)
+ 80003d8:	6812      	ldr	r2, [r2, #0]
+ 80003da:	f042 0201 	orr.w	r2, r2, #1
+ 80003de:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:354
+
+  /* Reset CFGR register */
+  RCC->CFGR = 0x00000000;
+ 80003e0:	4b0e      	ldr	r3, [pc, #56]	; (800041c <SystemInit+0x4c>)
+ 80003e2:	2200      	movs	r2, #0
+ 80003e4:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:357
+
+  /* Reset HSEON, CSSON and PLLON bits */
+  RCC->CR &= (uint32_t)0xFEF6FFFF;
+ 80003e6:	4a0d      	ldr	r2, [pc, #52]	; (800041c <SystemInit+0x4c>)
+ 80003e8:	4b0c      	ldr	r3, [pc, #48]	; (800041c <SystemInit+0x4c>)
+ 80003ea:	681b      	ldr	r3, [r3, #0]
+ 80003ec:	f023 7384 	bic.w	r3, r3, #17301504	; 0x1080000
+ 80003f0:	f423 3380 	bic.w	r3, r3, #65536	; 0x10000
+ 80003f4:	6013      	str	r3, [r2, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:360
+
+  /* Reset PLLCFGR register */
+  RCC->PLLCFGR = 0x24003010;
+ 80003f6:	4b09      	ldr	r3, [pc, #36]	; (800041c <SystemInit+0x4c>)
+ 80003f8:	4a09      	ldr	r2, [pc, #36]	; (8000420 <SystemInit+0x50>)
+ 80003fa:	605a      	str	r2, [r3, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:363
+
+  /* Reset HSEBYP bit */
+  RCC->CR &= (uint32_t)0xFFFBFFFF;
+ 80003fc:	4b07      	ldr	r3, [pc, #28]	; (800041c <SystemInit+0x4c>)
+ 80003fe:	4a07      	ldr	r2, [pc, #28]	; (800041c <SystemInit+0x4c>)
+ 8000400:	6812      	ldr	r2, [r2, #0]
+ 8000402:	f422 2280 	bic.w	r2, r2, #262144	; 0x40000
+ 8000406:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:366
+
+  /* Disable all interrupts */
+  RCC->CIR = 0x00000000;
+ 8000408:	4b04      	ldr	r3, [pc, #16]	; (800041c <SystemInit+0x4c>)
+ 800040a:	2200      	movs	r2, #0
+ 800040c:	60da      	str	r2, [r3, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:374
+  SystemInit_ExtMemCtl(); 
+#endif /* DATA_IN_ExtSRAM || DATA_IN_ExtSDRAM */
+         
+  /* Configure the System clock source, PLL Multiplier and Divider factors, 
+     AHB/APBx prescalers and Flash settings ----------------------------------*/
+  SetSysClock();
+ 800040e:	f000 f80b 	bl	8000428 <SetSysClock>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:380
+
+  /* Configure the Vector Table location add offset address ------------------*/
+#ifdef VECT_TAB_SRAM
+  SCB->VTOR = SRAM_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal SRAM */
+#else
+  SCB->VTOR = FLASH_BASE | VECT_TAB_OFFSET; /* Vector Table Relocation in Internal FLASH */
+ 8000412:	4b04      	ldr	r3, [pc, #16]	; (8000424 <SystemInit+0x54>)
+ 8000414:	f04f 6200 	mov.w	r2, #134217728	; 0x8000000
+ 8000418:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:382
+#endif
+}
+ 800041a:	bd80      	pop	{r7, pc}
+ 800041c:	40023800 	.word	0x40023800
+ 8000420:	24003010 	.word	0x24003010
+ 8000424:	e000ed00 	.word	0xe000ed00
+
+08000428 <SetSysClock>:
+SetSysClock():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:477
+  *         is reset to the default reset state (done in SystemInit() function).   
+  * @param  None
+  * @retval None
+  */
+static void SetSysClock(void)
+{
+ 8000428:	b480      	push	{r7}
+ 800042a:	b083      	sub	sp, #12
+ 800042c:	af00      	add	r7, sp, #0
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:481
+/******************************************************************************/
+/*            PLL (clocked by HSE) used as System clock source                */
+/******************************************************************************/
+  __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
+ 800042e:	2300      	movs	r3, #0
+ 8000430:	607b      	str	r3, [r7, #4]
+ 8000432:	2300      	movs	r3, #0
+ 8000434:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:484
+  
+  /* Enable HSE */
+  RCC->CR |= ((uint32_t)RCC_CR_HSEON);
+ 8000436:	4b35      	ldr	r3, [pc, #212]	; (800050c <SetSysClock+0xe4>)
+ 8000438:	4a34      	ldr	r2, [pc, #208]	; (800050c <SetSysClock+0xe4>)
+ 800043a:	6812      	ldr	r2, [r2, #0]
+ 800043c:	f442 3280 	orr.w	r2, r2, #65536	; 0x10000
+ 8000440:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:489 (discriminator 1)
+ 
+  /* Wait till HSE is ready and if Time out is reached exit */
+  do
+  {
+    HSEStatus = RCC->CR & RCC_CR_HSERDY;
+ 8000442:	4b32      	ldr	r3, [pc, #200]	; (800050c <SetSysClock+0xe4>)
+ 8000444:	681b      	ldr	r3, [r3, #0]
+ 8000446:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+ 800044a:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:490 (discriminator 1)
+    StartUpCounter++;
+ 800044c:	687b      	ldr	r3, [r7, #4]
+ 800044e:	3301      	adds	r3, #1
+ 8000450:	607b      	str	r3, [r7, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:491 (discriminator 1)
+  } while((HSEStatus == 0) && (StartUpCounter != HSE_STARTUP_TIMEOUT));
+ 8000452:	683b      	ldr	r3, [r7, #0]
+ 8000454:	2b00      	cmp	r3, #0
+ 8000456:	d103      	bne.n	8000460 <SetSysClock+0x38>
+ 8000458:	687b      	ldr	r3, [r7, #4]
+ 800045a:	f5b3 4fa0 	cmp.w	r3, #20480	; 0x5000
+ 800045e:	d1f0      	bne.n	8000442 <SetSysClock+0x1a>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:493
+
+  if ((RCC->CR & RCC_CR_HSERDY) != RESET)
+ 8000460:	4b2a      	ldr	r3, [pc, #168]	; (800050c <SetSysClock+0xe4>)
+ 8000462:	681b      	ldr	r3, [r3, #0]
+ 8000464:	f403 3300 	and.w	r3, r3, #131072	; 0x20000
+ 8000468:	2b00      	cmp	r3, #0
+ 800046a:	d002      	beq.n	8000472 <SetSysClock+0x4a>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:495
+  {
+    HSEStatus = (uint32_t)0x01;
+ 800046c:	2301      	movs	r3, #1
+ 800046e:	603b      	str	r3, [r7, #0]
+ 8000470:	e001      	b.n	8000476 <SetSysClock+0x4e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:499
+  }
+  else
+  {
+    HSEStatus = (uint32_t)0x00;
+ 8000472:	2300      	movs	r3, #0
+ 8000474:	603b      	str	r3, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:502
+  }
+
+  if (HSEStatus == (uint32_t)0x01)
+ 8000476:	683b      	ldr	r3, [r7, #0]
+ 8000478:	2b01      	cmp	r3, #1
+ 800047a:	d142      	bne.n	8000502 <SetSysClock+0xda>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:505
+  {
+    /* Select regulator voltage output Scale 1 mode */
+    RCC->APB1ENR |= RCC_APB1ENR_PWREN;
+ 800047c:	4b23      	ldr	r3, [pc, #140]	; (800050c <SetSysClock+0xe4>)
+ 800047e:	4a23      	ldr	r2, [pc, #140]	; (800050c <SetSysClock+0xe4>)
+ 8000480:	6c12      	ldr	r2, [r2, #64]	; 0x40
+ 8000482:	f042 5280 	orr.w	r2, r2, #268435456	; 0x10000000
+ 8000486:	641a      	str	r2, [r3, #64]	; 0x40
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:506
+    PWR->CR |= PWR_CR_VOS;
+ 8000488:	4b21      	ldr	r3, [pc, #132]	; (8000510 <SetSysClock+0xe8>)
+ 800048a:	4a21      	ldr	r2, [pc, #132]	; (8000510 <SetSysClock+0xe8>)
+ 800048c:	6812      	ldr	r2, [r2, #0]
+ 800048e:	f442 4240 	orr.w	r2, r2, #49152	; 0xc000
+ 8000492:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:509
+
+    /* HCLK = SYSCLK / 1*/
+    RCC->CFGR |= RCC_CFGR_HPRE_DIV1;
+ 8000494:	4b1d      	ldr	r3, [pc, #116]	; (800050c <SetSysClock+0xe4>)
+ 8000496:	4a1d      	ldr	r2, [pc, #116]	; (800050c <SetSysClock+0xe4>)
+ 8000498:	6892      	ldr	r2, [r2, #8]
+ 800049a:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:513
+
+#if defined (STM32F40_41xxx) || defined (STM32F427_437xx) || defined (STM32F429_439xx)      
+    /* PCLK2 = HCLK / 2*/
+    RCC->CFGR |= RCC_CFGR_PPRE2_DIV2;
+ 800049c:	4b1b      	ldr	r3, [pc, #108]	; (800050c <SetSysClock+0xe4>)
+ 800049e:	4a1b      	ldr	r2, [pc, #108]	; (800050c <SetSysClock+0xe4>)
+ 80004a0:	6892      	ldr	r2, [r2, #8]
+ 80004a2:	f442 4200 	orr.w	r2, r2, #32768	; 0x8000
+ 80004a6:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:516
+    
+    /* PCLK1 = HCLK / 4*/
+    RCC->CFGR |= RCC_CFGR_PPRE1_DIV4;
+ 80004a8:	4b18      	ldr	r3, [pc, #96]	; (800050c <SetSysClock+0xe4>)
+ 80004aa:	4a18      	ldr	r2, [pc, #96]	; (800050c <SetSysClock+0xe4>)
+ 80004ac:	6892      	ldr	r2, [r2, #8]
+ 80004ae:	f442 52a0 	orr.w	r2, r2, #5120	; 0x1400
+ 80004b2:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:528
+    /* PCLK1 = HCLK / 4*/
+    RCC->CFGR |= RCC_CFGR_PPRE1_DIV2;
+#endif /* STM32F401xx */
+   
+    /* Configure the main PLL */
+    RCC->PLLCFGR = PLL_M | (PLL_N << 6) | (((PLL_P >> 1) -1) << 16) |
+ 80004b4:	4b15      	ldr	r3, [pc, #84]	; (800050c <SetSysClock+0xe4>)
+ 80004b6:	4a17      	ldr	r2, [pc, #92]	; (8000514 <SetSysClock+0xec>)
+ 80004b8:	605a      	str	r2, [r3, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:532
+                   (RCC_PLLCFGR_PLLSRC_HSE) | (PLL_Q << 24);
+
+    /* Enable the main PLL */
+    RCC->CR |= RCC_CR_PLLON;
+ 80004ba:	4b14      	ldr	r3, [pc, #80]	; (800050c <SetSysClock+0xe4>)
+ 80004bc:	4a13      	ldr	r2, [pc, #76]	; (800050c <SetSysClock+0xe4>)
+ 80004be:	6812      	ldr	r2, [r2, #0]
+ 80004c0:	f042 7280 	orr.w	r2, r2, #16777216	; 0x1000000
+ 80004c4:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:535
+
+    /* Wait till the main PLL is ready */
+    while((RCC->CR & RCC_CR_PLLRDY) == 0)
+ 80004c6:	bf00      	nop
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:535 (discriminator 1)
+ 80004c8:	4b10      	ldr	r3, [pc, #64]	; (800050c <SetSysClock+0xe4>)
+ 80004ca:	681b      	ldr	r3, [r3, #0]
+ 80004cc:	f003 7300 	and.w	r3, r3, #33554432	; 0x2000000
+ 80004d0:	2b00      	cmp	r3, #0
+ 80004d2:	d0f9      	beq.n	80004c8 <SetSysClock+0xa0>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:555
+    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_5WS;
+#endif /* STM32F427_437x || STM32F429_439xx  */
+
+#if defined (STM32F40_41xxx)     
+    /* Configure Flash prefetch, Instruction cache, Data cache and wait state */
+    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_5WS;
+ 80004d4:	4b10      	ldr	r3, [pc, #64]	; (8000518 <SetSysClock+0xf0>)
+ 80004d6:	f240 7205 	movw	r2, #1797	; 0x705
+ 80004da:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:564
+    /* Configure Flash prefetch, Instruction cache, Data cache and wait state */
+    FLASH->ACR = FLASH_ACR_PRFTEN | FLASH_ACR_ICEN |FLASH_ACR_DCEN |FLASH_ACR_LATENCY_2WS;
+#endif /* STM32F401xx */
+
+    /* Select the main PLL as system clock source */
+    RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+ 80004dc:	4b0b      	ldr	r3, [pc, #44]	; (800050c <SetSysClock+0xe4>)
+ 80004de:	4a0b      	ldr	r2, [pc, #44]	; (800050c <SetSysClock+0xe4>)
+ 80004e0:	6892      	ldr	r2, [r2, #8]
+ 80004e2:	f022 0203 	bic.w	r2, r2, #3
+ 80004e6:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:565
+    RCC->CFGR |= RCC_CFGR_SW_PLL;
+ 80004e8:	4b08      	ldr	r3, [pc, #32]	; (800050c <SetSysClock+0xe4>)
+ 80004ea:	4a08      	ldr	r2, [pc, #32]	; (800050c <SetSysClock+0xe4>)
+ 80004ec:	6892      	ldr	r2, [r2, #8]
+ 80004ee:	f042 0202 	orr.w	r2, r2, #2
+ 80004f2:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:568
+
+    /* Wait till the main PLL is used as system clock source */
+    while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS ) != RCC_CFGR_SWS_PLL);
+ 80004f4:	bf00      	nop
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:568 (discriminator 1)
+ 80004f6:	4b05      	ldr	r3, [pc, #20]	; (800050c <SetSysClock+0xe4>)
+ 80004f8:	689b      	ldr	r3, [r3, #8]
+ 80004fa:	f003 030c 	and.w	r3, r3, #12
+ 80004fe:	2b08      	cmp	r3, #8
+ 8000500:	d1f9      	bne.n	80004f6 <SetSysClock+0xce>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/cmsis/src/system_stm32f4xx.c:577
+  else
+  { /* If HSE fails to start-up, the application will have wrong clock
+         configuration. User can add here some code to deal with this error */
+  }
+
+}
+ 8000502:	370c      	adds	r7, #12
+ 8000504:	46bd      	mov	sp, r7
+ 8000506:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800050a:	4770      	bx	lr
+ 800050c:	40023800 	.word	0x40023800
+ 8000510:	40007000 	.word	0x40007000
+ 8000514:	07405408 	.word	0x07405408
+ 8000518:	40023c00 	.word	0x40023c00
+
+0800051c <GPIO_Init>:
+GPIO_Init():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:203
+  * @param  GPIO_InitStruct: pointer to a GPIO_InitTypeDef structure that contains
+  *         the configuration information for the specified GPIO peripheral.
+  * @retval None
+  */
+void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
+{
+ 800051c:	b480      	push	{r7}
+ 800051e:	b087      	sub	sp, #28
+ 8000520:	af00      	add	r7, sp, #0
+ 8000522:	6078      	str	r0, [r7, #4]
+ 8000524:	6039      	str	r1, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:204
+  uint32_t pinpos = 0x00, pos = 0x00 , currentpin = 0x00;
+ 8000526:	2300      	movs	r3, #0
+ 8000528:	617b      	str	r3, [r7, #20]
+ 800052a:	2300      	movs	r3, #0
+ 800052c:	613b      	str	r3, [r7, #16]
+ 800052e:	2300      	movs	r3, #0
+ 8000530:	60fb      	str	r3, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:214
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PUPD(GPIO_InitStruct->GPIO_PuPd));
+
+  /* ------------------------- Configure the port pins ---------------- */
+  /*-- GPIO Mode Configuration --*/
+  for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+ 8000532:	2300      	movs	r3, #0
+ 8000534:	617b      	str	r3, [r7, #20]
+ 8000536:	e076      	b.n	8000626 <GPIO_Init+0x10a>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:216
+  {
+    pos = ((uint32_t)0x01) << pinpos;
+ 8000538:	697b      	ldr	r3, [r7, #20]
+ 800053a:	2201      	movs	r2, #1
+ 800053c:	fa02 f303 	lsl.w	r3, r2, r3
+ 8000540:	613b      	str	r3, [r7, #16]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:218
+    /* Get the port pins position */
+    currentpin = (GPIO_InitStruct->GPIO_Pin) & pos;
+ 8000542:	683b      	ldr	r3, [r7, #0]
+ 8000544:	681a      	ldr	r2, [r3, #0]
+ 8000546:	693b      	ldr	r3, [r7, #16]
+ 8000548:	4013      	ands	r3, r2
+ 800054a:	60fb      	str	r3, [r7, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:220
+
+    if (currentpin == pos)
+ 800054c:	68fa      	ldr	r2, [r7, #12]
+ 800054e:	693b      	ldr	r3, [r7, #16]
+ 8000550:	429a      	cmp	r2, r3
+ 8000552:	d165      	bne.n	8000620 <GPIO_Init+0x104>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:222
+    {
+      GPIOx->MODER  &= ~(GPIO_MODER_MODER0 << (pinpos * 2));
+ 8000554:	687b      	ldr	r3, [r7, #4]
+ 8000556:	681a      	ldr	r2, [r3, #0]
+ 8000558:	697b      	ldr	r3, [r7, #20]
+ 800055a:	005b      	lsls	r3, r3, #1
+ 800055c:	2103      	movs	r1, #3
+ 800055e:	fa01 f303 	lsl.w	r3, r1, r3
+ 8000562:	43db      	mvns	r3, r3
+ 8000564:	401a      	ands	r2, r3
+ 8000566:	687b      	ldr	r3, [r7, #4]
+ 8000568:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:223
+      GPIOx->MODER |= (((uint32_t)GPIO_InitStruct->GPIO_Mode) << (pinpos * 2));
+ 800056a:	687b      	ldr	r3, [r7, #4]
+ 800056c:	681a      	ldr	r2, [r3, #0]
+ 800056e:	683b      	ldr	r3, [r7, #0]
+ 8000570:	791b      	ldrb	r3, [r3, #4]
+ 8000572:	4619      	mov	r1, r3
+ 8000574:	697b      	ldr	r3, [r7, #20]
+ 8000576:	005b      	lsls	r3, r3, #1
+ 8000578:	fa01 f303 	lsl.w	r3, r1, r3
+ 800057c:	431a      	orrs	r2, r3
+ 800057e:	687b      	ldr	r3, [r7, #4]
+ 8000580:	601a      	str	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:225
+
+      if ((GPIO_InitStruct->GPIO_Mode == GPIO_Mode_OUT) || (GPIO_InitStruct->GPIO_Mode == GPIO_Mode_AF))
+ 8000582:	683b      	ldr	r3, [r7, #0]
+ 8000584:	791b      	ldrb	r3, [r3, #4]
+ 8000586:	2b01      	cmp	r3, #1
+ 8000588:	d003      	beq.n	8000592 <GPIO_Init+0x76>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:225 (discriminator 1)
+ 800058a:	683b      	ldr	r3, [r7, #0]
+ 800058c:	791b      	ldrb	r3, [r3, #4]
+ 800058e:	2b02      	cmp	r3, #2
+ 8000590:	d12e      	bne.n	80005f0 <GPIO_Init+0xd4>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:231
+      {
+        /* Check Speed mode parameters */
+        assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+
+        /* Speed mode configuration */
+        GPIOx->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR0 << (pinpos * 2));
+ 8000592:	687b      	ldr	r3, [r7, #4]
+ 8000594:	689a      	ldr	r2, [r3, #8]
+ 8000596:	697b      	ldr	r3, [r7, #20]
+ 8000598:	005b      	lsls	r3, r3, #1
+ 800059a:	2103      	movs	r1, #3
+ 800059c:	fa01 f303 	lsl.w	r3, r1, r3
+ 80005a0:	43db      	mvns	r3, r3
+ 80005a2:	401a      	ands	r2, r3
+ 80005a4:	687b      	ldr	r3, [r7, #4]
+ 80005a6:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:232
+        GPIOx->OSPEEDR |= ((uint32_t)(GPIO_InitStruct->GPIO_Speed) << (pinpos * 2));
+ 80005a8:	687b      	ldr	r3, [r7, #4]
+ 80005aa:	689a      	ldr	r2, [r3, #8]
+ 80005ac:	683b      	ldr	r3, [r7, #0]
+ 80005ae:	795b      	ldrb	r3, [r3, #5]
+ 80005b0:	4619      	mov	r1, r3
+ 80005b2:	697b      	ldr	r3, [r7, #20]
+ 80005b4:	005b      	lsls	r3, r3, #1
+ 80005b6:	fa01 f303 	lsl.w	r3, r1, r3
+ 80005ba:	431a      	orrs	r2, r3
+ 80005bc:	687b      	ldr	r3, [r7, #4]
+ 80005be:	609a      	str	r2, [r3, #8]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:238
+
+        /* Check Output mode parameters */
+        assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+
+        /* Output mode configuration*/
+        GPIOx->OTYPER  &= ~((GPIO_OTYPER_OT_0) << ((uint16_t)pinpos)) ;
+ 80005c0:	687b      	ldr	r3, [r7, #4]
+ 80005c2:	685a      	ldr	r2, [r3, #4]
+ 80005c4:	697b      	ldr	r3, [r7, #20]
+ 80005c6:	b29b      	uxth	r3, r3
+ 80005c8:	2101      	movs	r1, #1
+ 80005ca:	fa01 f303 	lsl.w	r3, r1, r3
+ 80005ce:	43db      	mvns	r3, r3
+ 80005d0:	401a      	ands	r2, r3
+ 80005d2:	687b      	ldr	r3, [r7, #4]
+ 80005d4:	605a      	str	r2, [r3, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:239
+        GPIOx->OTYPER |= (uint16_t)(((uint16_t)GPIO_InitStruct->GPIO_OType) << ((uint16_t)pinpos));
+ 80005d6:	687b      	ldr	r3, [r7, #4]
+ 80005d8:	685a      	ldr	r2, [r3, #4]
+ 80005da:	683b      	ldr	r3, [r7, #0]
+ 80005dc:	799b      	ldrb	r3, [r3, #6]
+ 80005de:	4619      	mov	r1, r3
+ 80005e0:	697b      	ldr	r3, [r7, #20]
+ 80005e2:	b29b      	uxth	r3, r3
+ 80005e4:	fa01 f303 	lsl.w	r3, r1, r3
+ 80005e8:	b29b      	uxth	r3, r3
+ 80005ea:	431a      	orrs	r2, r3
+ 80005ec:	687b      	ldr	r3, [r7, #4]
+ 80005ee:	605a      	str	r2, [r3, #4]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:243
+      }
+
+      /* Pull-up Pull down resistor configuration*/
+      GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << ((uint16_t)pinpos * 2));
+ 80005f0:	687b      	ldr	r3, [r7, #4]
+ 80005f2:	68da      	ldr	r2, [r3, #12]
+ 80005f4:	697b      	ldr	r3, [r7, #20]
+ 80005f6:	b29b      	uxth	r3, r3
+ 80005f8:	005b      	lsls	r3, r3, #1
+ 80005fa:	2103      	movs	r1, #3
+ 80005fc:	fa01 f303 	lsl.w	r3, r1, r3
+ 8000600:	43db      	mvns	r3, r3
+ 8000602:	401a      	ands	r2, r3
+ 8000604:	687b      	ldr	r3, [r7, #4]
+ 8000606:	60da      	str	r2, [r3, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:244
+      GPIOx->PUPDR |= (((uint32_t)GPIO_InitStruct->GPIO_PuPd) << (pinpos * 2));
+ 8000608:	687b      	ldr	r3, [r7, #4]
+ 800060a:	68da      	ldr	r2, [r3, #12]
+ 800060c:	683b      	ldr	r3, [r7, #0]
+ 800060e:	79db      	ldrb	r3, [r3, #7]
+ 8000610:	4619      	mov	r1, r3
+ 8000612:	697b      	ldr	r3, [r7, #20]
+ 8000614:	005b      	lsls	r3, r3, #1
+ 8000616:	fa01 f303 	lsl.w	r3, r1, r3
+ 800061a:	431a      	orrs	r2, r3
+ 800061c:	687b      	ldr	r3, [r7, #4]
+ 800061e:	60da      	str	r2, [r3, #12]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:214
+  assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+  assert_param(IS_GPIO_PUPD(GPIO_InitStruct->GPIO_PuPd));
+
+  /* ------------------------- Configure the port pins ---------------- */
+  /*-- GPIO Mode Configuration --*/
+  for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+ 8000620:	697b      	ldr	r3, [r7, #20]
+ 8000622:	3301      	adds	r3, #1
+ 8000624:	617b      	str	r3, [r7, #20]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:214 (discriminator 1)
+ 8000626:	697b      	ldr	r3, [r7, #20]
+ 8000628:	2b0f      	cmp	r3, #15
+ 800062a:	d985      	bls.n	8000538 <GPIO_Init+0x1c>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:247
+      /* Pull-up Pull down resistor configuration*/
+      GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << ((uint16_t)pinpos * 2));
+      GPIOx->PUPDR |= (((uint32_t)GPIO_InitStruct->GPIO_PuPd) << (pinpos * 2));
+    }
+  }
+}
+ 800062c:	371c      	adds	r7, #28
+ 800062e:	46bd      	mov	sp, r7
+ 8000630:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000634:	4770      	bx	lr
+ 8000636:	bf00      	nop
+
+08000638 <GPIO_ToggleBits>:
+GPIO_ToggleBits():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:497
+  *                      x can be (A, B, C, D and H) to select the GPIO peripheral for STM32F401xx devices. 
+  * @param  GPIO_Pin: Specifies the pins to be toggled.
+  * @retval None
+  */
+void GPIO_ToggleBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+{
+ 8000638:	b480      	push	{r7}
+ 800063a:	b083      	sub	sp, #12
+ 800063c:	af00      	add	r7, sp, #0
+ 800063e:	6078      	str	r0, [r7, #4]
+ 8000640:	460b      	mov	r3, r1
+ 8000642:	807b      	strh	r3, [r7, #2]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:501
+  /* Check the parameters */
+  assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+
+  GPIOx->ODR ^= GPIO_Pin;
+ 8000644:	687b      	ldr	r3, [r7, #4]
+ 8000646:	695a      	ldr	r2, [r3, #20]
+ 8000648:	887b      	ldrh	r3, [r7, #2]
+ 800064a:	405a      	eors	r2, r3
+ 800064c:	687b      	ldr	r3, [r7, #4]
+ 800064e:	615a      	str	r2, [r3, #20]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_gpio.c:502
+}
+ 8000650:	370c      	adds	r7, #12
+ 8000652:	46bd      	mov	sp, r7
+ 8000654:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000658:	4770      	bx	lr
+ 800065a:	bf00      	nop
+
+0800065c <RCC_AHB1PeriphClockCmd>:
+RCC_AHB1PeriphClockCmd():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1461
+  * @param  NewState: new state of the specified peripheral clock.
+  *          This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_AHB1PeriphClockCmd(uint32_t RCC_AHB1Periph, FunctionalState NewState)
+{
+ 800065c:	b480      	push	{r7}
+ 800065e:	b083      	sub	sp, #12
+ 8000660:	af00      	add	r7, sp, #0
+ 8000662:	6078      	str	r0, [r7, #4]
+ 8000664:	460b      	mov	r3, r1
+ 8000666:	70fb      	strb	r3, [r7, #3]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1466
+  /* Check the parameters */
+  assert_param(IS_RCC_AHB1_CLOCK_PERIPH(RCC_AHB1Periph));
+
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  if (NewState != DISABLE)
+ 8000668:	78fb      	ldrb	r3, [r7, #3]
+ 800066a:	2b00      	cmp	r3, #0
+ 800066c:	d006      	beq.n	800067c <RCC_AHB1PeriphClockCmd+0x20>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1468
+  {
+    RCC->AHB1ENR |= RCC_AHB1Periph;
+ 800066e:	4b09      	ldr	r3, [pc, #36]	; (8000694 <RCC_AHB1PeriphClockCmd+0x38>)
+ 8000670:	4a08      	ldr	r2, [pc, #32]	; (8000694 <RCC_AHB1PeriphClockCmd+0x38>)
+ 8000672:	6b11      	ldr	r1, [r2, #48]	; 0x30
+ 8000674:	687a      	ldr	r2, [r7, #4]
+ 8000676:	430a      	orrs	r2, r1
+ 8000678:	631a      	str	r2, [r3, #48]	; 0x30
+ 800067a:	e006      	b.n	800068a <RCC_AHB1PeriphClockCmd+0x2e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1472
+  }
+  else
+  {
+    RCC->AHB1ENR &= ~RCC_AHB1Periph;
+ 800067c:	4b05      	ldr	r3, [pc, #20]	; (8000694 <RCC_AHB1PeriphClockCmd+0x38>)
+ 800067e:	4a05      	ldr	r2, [pc, #20]	; (8000694 <RCC_AHB1PeriphClockCmd+0x38>)
+ 8000680:	6b11      	ldr	r1, [r2, #48]	; 0x30
+ 8000682:	687a      	ldr	r2, [r7, #4]
+ 8000684:	43d2      	mvns	r2, r2
+ 8000686:	400a      	ands	r2, r1
+ 8000688:	631a      	str	r2, [r3, #48]	; 0x30
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1474
+  }
+}
+ 800068a:	370c      	adds	r7, #12
+ 800068c:	46bd      	mov	sp, r7
+ 800068e:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 8000692:	4770      	bx	lr
+ 8000694:	40023800 	.word	0x40023800
+
+08000698 <RCC_APB1PeriphClockCmd>:
+RCC_APB1PeriphClockCmd():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1573
+  * @param  NewState: new state of the specified peripheral clock.
+  *          This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void RCC_APB1PeriphClockCmd(uint32_t RCC_APB1Periph, FunctionalState NewState)
+{
+ 8000698:	b480      	push	{r7}
+ 800069a:	b083      	sub	sp, #12
+ 800069c:	af00      	add	r7, sp, #0
+ 800069e:	6078      	str	r0, [r7, #4]
+ 80006a0:	460b      	mov	r3, r1
+ 80006a2:	70fb      	strb	r3, [r7, #3]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1578
+  /* Check the parameters */
+  assert_param(IS_RCC_APB1_PERIPH(RCC_APB1Periph));  
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+
+  if (NewState != DISABLE)
+ 80006a4:	78fb      	ldrb	r3, [r7, #3]
+ 80006a6:	2b00      	cmp	r3, #0
+ 80006a8:	d006      	beq.n	80006b8 <RCC_APB1PeriphClockCmd+0x20>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1580
+  {
+    RCC->APB1ENR |= RCC_APB1Periph;
+ 80006aa:	4b09      	ldr	r3, [pc, #36]	; (80006d0 <RCC_APB1PeriphClockCmd+0x38>)
+ 80006ac:	4a08      	ldr	r2, [pc, #32]	; (80006d0 <RCC_APB1PeriphClockCmd+0x38>)
+ 80006ae:	6c11      	ldr	r1, [r2, #64]	; 0x40
+ 80006b0:	687a      	ldr	r2, [r7, #4]
+ 80006b2:	430a      	orrs	r2, r1
+ 80006b4:	641a      	str	r2, [r3, #64]	; 0x40
+ 80006b6:	e006      	b.n	80006c6 <RCC_APB1PeriphClockCmd+0x2e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1584
+  }
+  else
+  {
+    RCC->APB1ENR &= ~RCC_APB1Periph;
+ 80006b8:	4b05      	ldr	r3, [pc, #20]	; (80006d0 <RCC_APB1PeriphClockCmd+0x38>)
+ 80006ba:	4a05      	ldr	r2, [pc, #20]	; (80006d0 <RCC_APB1PeriphClockCmd+0x38>)
+ 80006bc:	6c11      	ldr	r1, [r2, #64]	; 0x40
+ 80006be:	687a      	ldr	r2, [r7, #4]
+ 80006c0:	43d2      	mvns	r2, r2
+ 80006c2:	400a      	ands	r2, r1
+ 80006c4:	641a      	str	r2, [r3, #64]	; 0x40
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_rcc.c:1586
+  }
+}
+ 80006c6:	370c      	adds	r7, #12
+ 80006c8:	46bd      	mov	sp, r7
+ 80006ca:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80006ce:	4770      	bx	lr
+ 80006d0:	40023800 	.word	0x40023800
+
+080006d4 <TIM_TimeBaseInit>:
+TIM_TimeBaseInit():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:289
+  * @param  TIM_TimeBaseInitStruct: pointer to a TIM_TimeBaseInitTypeDef structure
+  *         that contains the configuration information for the specified TIM peripheral.
+  * @retval None
+  */
+void TIM_TimeBaseInit(TIM_TypeDef* TIMx, TIM_TimeBaseInitTypeDef* TIM_TimeBaseInitStruct)
+{
+ 80006d4:	b480      	push	{r7}
+ 80006d6:	b085      	sub	sp, #20
+ 80006d8:	af00      	add	r7, sp, #0
+ 80006da:	6078      	str	r0, [r7, #4]
+ 80006dc:	6039      	str	r1, [r7, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:290
+  uint16_t tmpcr1 = 0;
+ 80006de:	2300      	movs	r3, #0
+ 80006e0:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:297
+  /* Check the parameters */
+  assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+  assert_param(IS_TIM_COUNTER_MODE(TIM_TimeBaseInitStruct->TIM_CounterMode));
+  assert_param(IS_TIM_CKD_DIV(TIM_TimeBaseInitStruct->TIM_ClockDivision));
+
+  tmpcr1 = TIMx->CR1;  
+ 80006e2:	687b      	ldr	r3, [r7, #4]
+ 80006e4:	881b      	ldrh	r3, [r3, #0]
+ 80006e6:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:299
+
+  if((TIMx == TIM1) || (TIMx == TIM8)||
+ 80006e8:	687a      	ldr	r2, [r7, #4]
+ 80006ea:	4b28      	ldr	r3, [pc, #160]	; (800078c <TIM_TimeBaseInit+0xb8>)
+ 80006ec:	429a      	cmp	r2, r3
+ 80006ee:	d013      	beq.n	8000718 <TIM_TimeBaseInit+0x44>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:299 (discriminator 1)
+ 80006f0:	687a      	ldr	r2, [r7, #4]
+ 80006f2:	4b27      	ldr	r3, [pc, #156]	; (8000790 <TIM_TimeBaseInit+0xbc>)
+ 80006f4:	429a      	cmp	r2, r3
+ 80006f6:	d00f      	beq.n	8000718 <TIM_TimeBaseInit+0x44>
+ 80006f8:	687b      	ldr	r3, [r7, #4]
+ 80006fa:	f1b3 4f80 	cmp.w	r3, #1073741824	; 0x40000000
+ 80006fe:	d00b      	beq.n	8000718 <TIM_TimeBaseInit+0x44>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:300
+     (TIMx == TIM2) || (TIMx == TIM3)||
+ 8000700:	687a      	ldr	r2, [r7, #4]
+ 8000702:	4b24      	ldr	r3, [pc, #144]	; (8000794 <TIM_TimeBaseInit+0xc0>)
+ 8000704:	429a      	cmp	r2, r3
+ 8000706:	d007      	beq.n	8000718 <TIM_TimeBaseInit+0x44>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:300 (discriminator 1)
+ 8000708:	687a      	ldr	r2, [r7, #4]
+ 800070a:	4b23      	ldr	r3, [pc, #140]	; (8000798 <TIM_TimeBaseInit+0xc4>)
+ 800070c:	429a      	cmp	r2, r3
+ 800070e:	d003      	beq.n	8000718 <TIM_TimeBaseInit+0x44>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:301
+     (TIMx == TIM4) || (TIMx == TIM5)) 
+ 8000710:	687a      	ldr	r2, [r7, #4]
+ 8000712:	4b22      	ldr	r3, [pc, #136]	; (800079c <TIM_TimeBaseInit+0xc8>)
+ 8000714:	429a      	cmp	r2, r3
+ 8000716:	d108      	bne.n	800072a <TIM_TimeBaseInit+0x56>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:304
+  {
+    /* Select the Counter Mode */
+    tmpcr1 &= (uint16_t)(~(TIM_CR1_DIR | TIM_CR1_CMS));
+ 8000718:	89fb      	ldrh	r3, [r7, #14]
+ 800071a:	f023 0370 	bic.w	r3, r3, #112	; 0x70
+ 800071e:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:305
+    tmpcr1 |= (uint32_t)TIM_TimeBaseInitStruct->TIM_CounterMode;
+ 8000720:	683b      	ldr	r3, [r7, #0]
+ 8000722:	885a      	ldrh	r2, [r3, #2]
+ 8000724:	89fb      	ldrh	r3, [r7, #14]
+ 8000726:	4313      	orrs	r3, r2
+ 8000728:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:308
+  }
+ 
+  if((TIMx != TIM6) && (TIMx != TIM7))
+ 800072a:	687a      	ldr	r2, [r7, #4]
+ 800072c:	4b1c      	ldr	r3, [pc, #112]	; (80007a0 <TIM_TimeBaseInit+0xcc>)
+ 800072e:	429a      	cmp	r2, r3
+ 8000730:	d00c      	beq.n	800074c <TIM_TimeBaseInit+0x78>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:308 (discriminator 1)
+ 8000732:	687a      	ldr	r2, [r7, #4]
+ 8000734:	4b1b      	ldr	r3, [pc, #108]	; (80007a4 <TIM_TimeBaseInit+0xd0>)
+ 8000736:	429a      	cmp	r2, r3
+ 8000738:	d008      	beq.n	800074c <TIM_TimeBaseInit+0x78>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:311
+  {
+    /* Set the clock division */
+    tmpcr1 &=  (uint16_t)(~TIM_CR1_CKD);
+ 800073a:	89fb      	ldrh	r3, [r7, #14]
+ 800073c:	f423 7340 	bic.w	r3, r3, #768	; 0x300
+ 8000740:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:312
+    tmpcr1 |= (uint32_t)TIM_TimeBaseInitStruct->TIM_ClockDivision;
+ 8000742:	683b      	ldr	r3, [r7, #0]
+ 8000744:	891a      	ldrh	r2, [r3, #8]
+ 8000746:	89fb      	ldrh	r3, [r7, #14]
+ 8000748:	4313      	orrs	r3, r2
+ 800074a:	81fb      	strh	r3, [r7, #14]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:315
+  }
+
+  TIMx->CR1 = tmpcr1;
+ 800074c:	687b      	ldr	r3, [r7, #4]
+ 800074e:	89fa      	ldrh	r2, [r7, #14]
+ 8000750:	801a      	strh	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:318
+
+  /* Set the Autoreload value */
+  TIMx->ARR = TIM_TimeBaseInitStruct->TIM_Period ;
+ 8000752:	683b      	ldr	r3, [r7, #0]
+ 8000754:	685a      	ldr	r2, [r3, #4]
+ 8000756:	687b      	ldr	r3, [r7, #4]
+ 8000758:	62da      	str	r2, [r3, #44]	; 0x2c
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:321
+ 
+  /* Set the Prescaler value */
+  TIMx->PSC = TIM_TimeBaseInitStruct->TIM_Prescaler;
+ 800075a:	683b      	ldr	r3, [r7, #0]
+ 800075c:	881a      	ldrh	r2, [r3, #0]
+ 800075e:	687b      	ldr	r3, [r7, #4]
+ 8000760:	851a      	strh	r2, [r3, #40]	; 0x28
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:323
+    
+  if ((TIMx == TIM1) || (TIMx == TIM8))  
+ 8000762:	687a      	ldr	r2, [r7, #4]
+ 8000764:	4b09      	ldr	r3, [pc, #36]	; (800078c <TIM_TimeBaseInit+0xb8>)
+ 8000766:	429a      	cmp	r2, r3
+ 8000768:	d003      	beq.n	8000772 <TIM_TimeBaseInit+0x9e>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:323 (discriminator 1)
+ 800076a:	687a      	ldr	r2, [r7, #4]
+ 800076c:	4b08      	ldr	r3, [pc, #32]	; (8000790 <TIM_TimeBaseInit+0xbc>)
+ 800076e:	429a      	cmp	r2, r3
+ 8000770:	d104      	bne.n	800077c <TIM_TimeBaseInit+0xa8>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:326
+  {
+    /* Set the Repetition Counter value */
+    TIMx->RCR = TIM_TimeBaseInitStruct->TIM_RepetitionCounter;
+ 8000772:	683b      	ldr	r3, [r7, #0]
+ 8000774:	7a9b      	ldrb	r3, [r3, #10]
+ 8000776:	461a      	mov	r2, r3
+ 8000778:	687b      	ldr	r3, [r7, #4]
+ 800077a:	861a      	strh	r2, [r3, #48]	; 0x30
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:331
+  }
+
+  /* Generate an update event to reload the Prescaler 
+     and the repetition counter(only for TIM1 and TIM8) value immediatly */
+  TIMx->EGR = TIM_PSCReloadMode_Immediate;          
+ 800077c:	687b      	ldr	r3, [r7, #4]
+ 800077e:	2201      	movs	r2, #1
+ 8000780:	829a      	strh	r2, [r3, #20]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:332
+}
+ 8000782:	3714      	adds	r7, #20
+ 8000784:	46bd      	mov	sp, r7
+ 8000786:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 800078a:	4770      	bx	lr
+ 800078c:	40010000 	.word	0x40010000
+ 8000790:	40010400 	.word	0x40010400
+ 8000794:	40000400 	.word	0x40000400
+ 8000798:	40000800 	.word	0x40000800
+ 800079c:	40000c00 	.word	0x40000c00
+ 80007a0:	40001000 	.word	0x40001000
+ 80007a4:	40001400 	.word	0x40001400
+
+080007a8 <TIM_Cmd>:
+TIM_Cmd():
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:593
+  * @param  NewState: new state of the TIMx peripheral.
+  *          This parameter can be: ENABLE or DISABLE.
+  * @retval None
+  */
+void TIM_Cmd(TIM_TypeDef* TIMx, FunctionalState NewState)
+{
+ 80007a8:	b480      	push	{r7}
+ 80007aa:	b083      	sub	sp, #12
+ 80007ac:	af00      	add	r7, sp, #0
+ 80007ae:	6078      	str	r0, [r7, #4]
+ 80007b0:	460b      	mov	r3, r1
+ 80007b2:	70fb      	strb	r3, [r7, #3]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:598
+  /* Check the parameters */
+  assert_param(IS_TIM_ALL_PERIPH(TIMx)); 
+  assert_param(IS_FUNCTIONAL_STATE(NewState));
+  
+  if (NewState != DISABLE)
+ 80007b4:	78fb      	ldrb	r3, [r7, #3]
+ 80007b6:	2b00      	cmp	r3, #0
+ 80007b8:	d008      	beq.n	80007cc <TIM_Cmd+0x24>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:601
+  {
+    /* Enable the TIM Counter */
+    TIMx->CR1 |= TIM_CR1_CEN;
+ 80007ba:	687b      	ldr	r3, [r7, #4]
+ 80007bc:	881b      	ldrh	r3, [r3, #0]
+ 80007be:	b29b      	uxth	r3, r3
+ 80007c0:	f043 0301 	orr.w	r3, r3, #1
+ 80007c4:	b29a      	uxth	r2, r3
+ 80007c6:	687b      	ldr	r3, [r7, #4]
+ 80007c8:	801a      	strh	r2, [r3, #0]
+ 80007ca:	e007      	b.n	80007dc <TIM_Cmd+0x34>
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:606
+  }
+  else
+  {
+    /* Disable the TIM Counter */
+    TIMx->CR1 &= (uint16_t)~TIM_CR1_CEN;
+ 80007cc:	687b      	ldr	r3, [r7, #4]
+ 80007ce:	881b      	ldrh	r3, [r3, #0]
+ 80007d0:	b29b      	uxth	r3, r3
+ 80007d2:	f023 0301 	bic.w	r3, r3, #1
+ 80007d6:	b29a      	uxth	r2, r3
+ 80007d8:	687b      	ldr	r3, [r7, #4]
+ 80007da:	801a      	strh	r2, [r3, #0]
+/home/chansak/workspace/BlinkTimer/Debug/../libs/StdPeriph/src/stm32f4xx_tim.c:608
+  }
+}
+ 80007dc:	370c      	adds	r7, #12
+ 80007de:	46bd      	mov	sp, r7
+ 80007e0:	f85d 7b04 	ldr.w	r7, [sp], #4
+ 80007e4:	4770      	bx	lr
+ 80007e6:	bf00      	nop
