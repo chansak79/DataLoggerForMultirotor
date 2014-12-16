@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--MultiWiiWinGUI, Version 2.3.5127.41688-->
+<!--GUI Settings-->
+<!--Do not change this file manually, unless you know what are you doing-->
+<PARAMETERS>
+    <FCVERSION value="23" />
+    <LOGFOLDER value="C:\Users\Administrator\Downloads\Release\Logs" />
+    <CAPTUREFOLDER value="C:\Users\Administrator\Downloads\Release\Captures" />
+    <SETTINGSFOLDER value="C:\Users\Administrator\Downloads\Release\Settings" />
+    <LOGATCONNECT value="False" />
+    <SERIALPORT value="" />
+    <SERIALSPEED value="115200" />
+    <LOGRAW value="False" />
+    <LOGATT value="False" />
+    <LOGMAG value="False" />
+    <LOGRCC value="False" />
+    <LOGRCX value="False" />
+    <LOGMOT value="False" />
+    <LOGSRV value="False" />
+    <LOGNAV value="False" />
+    <LOGPAR value="False" />
+    <LOGDBG value="False" />
+    <MAPPROVIDER value="1" />
+    <SPEECH_ENABLED value="True" />
+    <CELLCOUNT value="3" />
+    <MAX_WP_NUMBER value="100" />
+    <WP_RADIUS value="200" />
+</PARAMETERS>
