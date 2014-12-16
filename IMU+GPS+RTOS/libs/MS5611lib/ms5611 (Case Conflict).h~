@@ -1,0 +1,17 @@
+#define MS5611_I2C                  I2C2
+
+#define MS5611_ADDRESS_AD0_LOW     0x77 // address pin low (GND), default for InvenSense evaluation board
+#define MS5611_ADDRESS_AD0_HIGH    0x78 // address pin high (VCC)
+#define MS5611_DEFAULT_ADDRESS     (MS5611_ADDRESS_AD0_LOW<<1)
+
+#define MS5611_CMD_ADC_READ         0x00
+#define MS5611_CMD_RESET            0x1E
+#define MS5611_CMD_CONV_D1          0x40
+#define MS5611_CMD_CONV_D2          0x50
+#define MS5611_CMD_READ_PROM        0xA2
+
+#define MS5611_ULTRA_HIGH_RES       0x08
+#define MS5611_HIGH_RES             0x06
+#define MS5611_STANDARD             0x04
+#define MS5611_LOW_POWER            0x02
+#define MS5611_ULTRA_LOW_POWER      0x00
