@@ -377,7 +377,7 @@ void vTaskROS (void* pvParameters)
     for(;;)
 	{
 		for (i = 0; i < ROS_NUMBER; i++) {
-			this_ros[i].speed = 60/(roundTime[i]/1000000.0);
+			this_ros[i].speed = roundTime[i];
 
 			/* for testing */
 			//sprintf(str_buffer, "PWM CH%d : %u\r\n", i, (unsigned int) roundTime[i]);
